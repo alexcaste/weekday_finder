@@ -7,21 +7,20 @@ class String
   month = the_date.at(0)
   day = the_date.at(1)
   current_date = Time.new(year, month, day)
-  current_date.wday()
 
-    if current_date.wday().eql?(0)
+    if current_date.sunday?()
       "Sunday"
-    elsif current_date.wday().eql?(1)
+    elsif current_date.monday?()
       "Monday"
-    elsif current_date.wday().eql?(2)
+    elsif current_date.tuesday?()
       "Tuesday"
-    elsif current_date.wday().eql?(3)
+    elsif current_date.wednesday?()
       "Wednesday"
-    elsif current_date.wday().eql?(4)
+    elsif current_date.thursday?()
       "Thursday"
-    elsif current_date.wday().eql?(5)
+    elsif current_date.friday?()
       "Friday"
-    else current_date.wday().eql?(6)
+    else 
       "Saturday"
     end
   end
